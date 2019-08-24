@@ -29,6 +29,7 @@ class BaseViewController: UIViewController {
     
     private func baseSetup() {
         view.backgroundColor = UIColor.View.background
+        addKeyboardHidingGesture()
     }
     
     func setupUI() {}

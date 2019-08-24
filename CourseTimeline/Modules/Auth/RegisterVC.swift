@@ -42,13 +42,13 @@ class RegisterVC: BaseViewController {
             return
         }
         
-        FBService.shared.createUser(withEmail: email, password: password, firstName: firstName.text, lastName: lastName.text) { (error) in
-            if let error = error {
+        FBService.shared.createUser(withEmail: email, password: password, firstName: firstName.text, lastName: lastName.text) { (result) in
+            switch result {
+            case .success:
+                RouteKit.changeRootWindow(to: .home, withNavigation: true)
+            case .failure(let error):
                 print(error.localizedDescription)
-                return
             }
-            
-            // push
         }
     }
 }

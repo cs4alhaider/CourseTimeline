@@ -24,30 +24,18 @@ class WelcomeVC: BaseViewController {
     }
 
     @IBAction func createAccountTapped(_ sender: LoaderButton) {
-        let vc = vcFromStoryboard(withClass: RegisterVC.self, from: .auth)
-        pushThis(vc)
+        RouteKit.push(to: .register)
     }
     
     @IBAction func loginTapped(_ sender: LightLoaderButton) {
-    }
-    
-    func userIsNotLoggedIn() {
-        let vc = vcFromStoryboard(withClass: RegisterVC.self, from: .auth)
-        let nv = BaseNavigationController(rootViewController: vc)
-        presentThis(nv)
-    }
-    
-    func userIsLoggedIn() {
-        let vc = vcFromStoryboard(withClass: HomeVC.self, from: .home)
-        let nv = BaseNavigationController(rootViewController: vc)
-        presentThis(nv)
+        RouteKit.push(to: .login)
     }
     
     func validateUser() {
         if FBService.shared.userIsLoggedIn() {
-            userIsLoggedIn()
+            // userIsLoggedIn()
         } else {
-            userIsNotLoggedIn()
+            // userIsNotLoggedIn()
         }
     }
     
