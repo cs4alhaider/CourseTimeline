@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4GT-dt-3tY">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WelcomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeVC" id="BYZ-38-t0r" customClass="WelcomeVC" customModule="CourseTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="View" customModule="CourseTimeline" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhz-JQ-3AY" customClass="PrimaryGradientView" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Timeline app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJA-9h-nLC" customClass="Label" customModule="CourseTimeline" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="190" width="196" height="108.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeline_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Euo-pe-QiK" customClass="ImageView" customModule="CourseTimeline" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="100" width="80" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="D4c-gg-BZr"/>
+                                            <constraint firstAttribute="height" constant="60" id="VtD-98-fTG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CJA-9h-nLC" secondAttribute="bottom" constant="15" id="F5n-2f-izA"/>
+                                    <constraint firstItem="Euo-pe-QiK" firstAttribute="top" relation="lessThanOrEqual" secondItem="Hhz-JQ-3AY" secondAttribute="top" constant="100" id="MJ1-Tj-DjB"/>
+                                    <constraint firstItem="Euo-pe-QiK" firstAttribute="leading" secondItem="Hhz-JQ-3AY" secondAttribute="leading" constant="30" id="NZo-dD-qqX"/>
+                                    <constraint firstItem="CJA-9h-nLC" firstAttribute="top" secondItem="Euo-pe-QiK" secondAttribute="bottom" constant="30" id="abr-LQ-BmZ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CJA-9h-nLC" secondAttribute="trailing" constant="20" symbolic="YES" id="j9f-fC-CSQ"/>
+                                    <constraint firstItem="CJA-9h-nLC" firstAttribute="leading" secondItem="Euo-pe-QiK" secondAttribute="leading" id="xus-W1-IOI"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Ap-9O-Ghq">
+                                <rect key="frame" x="30" y="677" width="354" height="155"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuR-2e-7uG" customClass="LoaderButton" customModule="CourseTimeline" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="qVR-kH-PYN"/>
+                                        </constraints>
+                                        <state key="normal" title="Create account"/>
+                                        <connections>
+                                            <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="43R-KF-HUX"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PlC-8H-nfm">
+                                        <rect key="frame" x="0.0" y="85" width="354" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90G-qP-qBg" customClass="LightLoaderButton" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="J8g-1g-Cli"/>
+                                                </constraints>
+                                                <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2VO-Dc-Z6d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMi-TD-uE5" customClass="LightLoaderButton" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="284" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="IXj-r0-FWQ"/>
+                                                    <constraint firstAttribute="width" constant="70" id="agF-cL-LRs"/>
+                                                </constraints>
+                                                <state key="normal" image="faceID"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="HMi-TD-uE5" secondAttribute="trailing" id="lQg-UE-rbq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new account or sign in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVa-nK-6yJ" customClass="Label" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="30" y="383.5" width="354" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hhz-JQ-3AY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="5yT-Og-Dh3"/>
+                            <constraint firstItem="Hhz-JQ-3AY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BYG-N2-ace"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Ap-9O-Ghq" secondAttribute="trailing" constant="30" id="BbH-yj-2et"/>
+                            <constraint firstItem="VVa-nK-6yJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="I8v-vf-kNX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Ap-9O-Ghq" secondAttribute="bottom" constant="30" id="OsL-9g-IzF"/>
+                            <constraint firstItem="Hhz-JQ-3AY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PVx-eQ-hN7"/>
+                            <constraint firstItem="2Ap-9O-Ghq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aYf-sR-eYj"/>
+                            <constraint firstItem="VVa-nK-6yJ" firstAttribute="top" secondItem="Hhz-JQ-3AY" secondAttribute="bottom" constant="70" id="iAP-PM-hfS"/>
+                            <constraint firstItem="Hhz-JQ-3AY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="knU-UC-u0e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VVa-nK-6yJ" secondAttribute="trailing" constant="30" id="ngp-Fq-qog"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zjj-Ja-1T1"/>
+                    <connections>
+                        <outlet property="createAccountLabel" destination="VVa-nK-6yJ" id="Tt0-bL-FXK"/>
+                        <outlet property="welcomeLabel" destination="CJA-9h-nLC" id="Tet-eK-MLD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q8t-bS-Ss4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4GT-dt-3tY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FgZ-9N-mYO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yYn-8M-Uqb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WfL-Ch-NLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="faceID" width="40" height="40"/>
+        <image name="timeline_icon" width="512" height="512"/>
+    </resources>
+</document>

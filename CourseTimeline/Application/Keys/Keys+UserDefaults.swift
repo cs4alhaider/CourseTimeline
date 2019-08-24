@@ -14,5 +14,9 @@ extension Keys {
         
         /// To save the bool if user is loged in
         static let isLoggedIn = "Keys.UserDefaults.isLoggedIn"
+        
+        static let userEmail = "Keys.UserDefaults.userEmail"
+        
+        static let userUID = "Keys.UserDefaults.userUID"
     }
 }

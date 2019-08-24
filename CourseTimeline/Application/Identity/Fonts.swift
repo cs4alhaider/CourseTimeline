@@ -10,25 +10,34 @@ import UIKit
 
 enum Font {
     
+    case black
     case bold
+    case semibold
+    case medium
     case regular
     case light
-    case black
+    case ultraLight
+    case thin
     
     var name: UIFont {
         switch self {
-        case .bold:
-            return UIFont.boldSystemFont(ofSize: 10)
-        // return UIFont(name: "Mobily-Bold", size: 10) ?? UIFont.boldSystemFont(ofSize: 10)
         case .black:
-            return UIFont.boldSystemFont(ofSize: 10)
-        // return UIFont(name: "Mobily-Black", size: 10) ?? UIFont.boldSystemFont(ofSize: 10)
+            return UIFont.systemFont(ofSize: 10, weight: .black)
+        case .bold:
+            return UIFont.systemFont(ofSize: 10, weight: .bold)
+        // return UIFont(name: "Mobily-Bold", size: 10) ?? UIFont.boldSystemFont(ofSize: 10)
+        case .semibold:
+            return UIFont.systemFont(ofSize: 10, weight: .semibold)
+        case .medium:
+            return UIFont.systemFont(ofSize: 10, weight: .medium)
         case .regular:
-            return UIFont.systemFont(ofSize: 10)
-        // return UIFont(name: "Mobily-Regular", size: 10) ?? UIFont.systemFont(ofSize: 10)
+            return UIFont.systemFont(ofSize: 10, weight: .regular)
         case .light:
-            return UIFont.systemFont(ofSize: 10)
-            // return UIFont(name: "Mobily-Light", size: 10) ?? UIFont.systemFont(ofSize: 10)
+            return UIFont.systemFont(ofSize: 10, weight: .light)
+        case .ultraLight:
+            return UIFont.systemFont(ofSize: 10, weight: .ultraLight)
+        case .thin:
+            return UIFont.systemFont(ofSize: 10, weight: .thin)
         }
     }
 }

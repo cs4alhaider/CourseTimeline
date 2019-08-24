@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RegisterVC-->
+        <scene sceneID="9hI-w7-ljB">
+            <objects>
+                <viewController storyboardIdentifier="RegisterVC" id="h9i-W4-5jE" customClass="RegisterVC" customModule="CourseTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UqO-1i-LGZ" customClass="View" customModule="CourseTimeline" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k70-xw-See" customClass="PrimaryGradientView" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-LI-3ue">
+                                        <rect key="frame" x="20" y="60" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="B8q-Ed-ym7"/>
+                                            <constraint firstAttribute="height" constant="30" id="rYG-Tf-yr9"/>
+                                        </constraints>
+                                        <state key="normal" image="Back_white_arraw">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jAZ-1W-mMX">
+                                        <rect key="frame" x="30" y="105" width="354" height="90.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsC-mC-UaM">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We wil send a code (via SMS text message) to your phone number " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-IV-WbM">
+                                                <rect key="frame" x="0.0" y="42.5" width="354" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jAZ-1W-mMX" firstAttribute="top" secondItem="gUS-LI-3ue" secondAttribute="bottom" constant="15" id="T90-kf-daK"/>
+                                    <constraint firstItem="gUS-LI-3ue" firstAttribute="top" secondItem="k70-xw-See" secondAttribute="top" constant="60" id="XD2-bW-Gjq"/>
+                                    <constraint firstItem="gUS-LI-3ue" firstAttribute="leading" secondItem="k70-xw-See" secondAttribute="leading" constant="20" id="aSD-uw-gy8"/>
+                                    <constraint firstAttribute="trailing" secondItem="jAZ-1W-mMX" secondAttribute="trailing" constant="30" id="k8h-H1-TFF"/>
+                                    <constraint firstItem="jAZ-1W-mMX" firstAttribute="leading" secondItem="k70-xw-See" secondAttribute="leading" constant="30" id="yG8-9l-ZBg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfr-AC-2X0" customClass="WhiteGradientView" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="30" y="253.5" width="354" height="280"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EmW-Qu-jxx">
+                                        <rect key="frame" x="20" y="20" width="314" height="240"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lN4-pN-Chu">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="63.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-kX-vaX" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="63.5"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="honorifix-prefix"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-OQ-l9R" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                        <rect key="frame" x="164.5" y="0.0" width="149.5" height="63.5"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="honorifix-suffix"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKI-Jn-JWJ" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="88.5" width="314" height="63.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58T-cR-2xC" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="177" width="314" height="63"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EmW-Qu-jxx" secondAttribute="trailing" constant="20" id="FPb-9R-WFV"/>
+                                    <constraint firstAttribute="height" constant="280" id="HpO-b3-yJP"/>
+                                    <constraint firstItem="EmW-Qu-jxx" firstAttribute="leading" secondItem="wfr-AC-2X0" secondAttribute="leading" constant="20" id="O6A-NE-af2"/>
+                                    <constraint firstItem="EmW-Qu-jxx" firstAttribute="top" secondItem="wfr-AC-2X0" secondAttribute="top" constant="20" id="XeG-5n-frh"/>
+                                    <constraint firstAttribute="bottom" secondItem="EmW-Qu-jxx" secondAttribute="bottom" constant="20" id="lt1-DH-LWc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By regsting you agree to our Tearms and conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28c-yR-d2Z" customClass="Label" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="30" y="563.5" width="354" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3S-oQ-cEO" customClass="LoaderButton" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="30" y="639.5" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="GzF-53-CJs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="registerTapped:" destination="h9i-W4-5jE" eventType="touchUpInside" id="YJx-1o-sua"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wfr-AC-2X0" firstAttribute="leading" secondItem="w17-ka-T7f" secondAttribute="leading" constant="30" id="2Lc-AN-VG8"/>
+                            <constraint firstItem="z3S-oQ-cEO" firstAttribute="top" secondItem="28c-yR-d2Z" secondAttribute="bottom" constant="35" id="4xn-Rw-z7k"/>
+                            <constraint firstItem="wfr-AC-2X0" firstAttribute="top" secondItem="k70-xw-See" secondAttribute="bottom" constant="-60" id="BiW-jx-rrF"/>
+                            <constraint firstItem="k70-xw-See" firstAttribute="height" secondItem="UqO-1i-LGZ" secondAttribute="height" multiplier="0.35" id="Bru-kO-cNl"/>
+                            <constraint firstItem="k70-xw-See" firstAttribute="trailing" secondItem="w17-ka-T7f" secondAttribute="trailing" id="Gqm-aq-Q4I"/>
+                            <constraint firstItem="w17-ka-T7f" firstAttribute="trailing" secondItem="28c-yR-d2Z" secondAttribute="trailing" constant="30" id="KiY-zY-mLj"/>
+                            <constraint firstItem="k70-xw-See" firstAttribute="top" secondItem="UqO-1i-LGZ" secondAttribute="top" id="W1o-lS-O5C"/>
+                            <constraint firstItem="28c-yR-d2Z" firstAttribute="top" secondItem="wfr-AC-2X0" secondAttribute="bottom" constant="30" id="XMV-WV-SLd"/>
+                            <constraint firstItem="z3S-oQ-cEO" firstAttribute="leading" secondItem="w17-ka-T7f" secondAttribute="leading" constant="30" id="YzM-Ma-qbe"/>
+                            <constraint firstItem="w17-ka-T7f" firstAttribute="trailing" secondItem="wfr-AC-2X0" secondAttribute="trailing" constant="30" id="hzy-84-lPo"/>
+                            <constraint firstItem="28c-yR-d2Z" firstAttribute="leading" secondItem="w17-ka-T7f" secondAttribute="leading" constant="30" id="pCK-n6-pjh"/>
+                            <constraint firstItem="k70-xw-See" firstAttribute="leading" secondItem="w17-ka-T7f" secondAttribute="leading" id="ueE-FX-Voi"/>
+                            <constraint firstItem="w17-ka-T7f" firstAttribute="trailing" secondItem="z3S-oQ-cEO" secondAttribute="trailing" constant="30" id="vHc-G0-IXD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w17-ka-T7f"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="WKI-Jn-JWJ" id="ucW-l1-HOg"/>
+                        <outlet property="firstName" destination="7eK-kX-vaX" id="qwZ-JW-SeQ"/>
+                        <outlet property="lastName" destination="ajk-OQ-l9R" id="aUr-VE-mgX"/>
+                        <outlet property="passwordTextField" destination="58T-cR-2xC" id="rr4-wr-tEx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="og4-zX-Up1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="222.99107142857142"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="aAa-9t-x4i">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="D5C-Bb-Vbt" customClass="LoginVC" customModule="CourseTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nqV-Bg-taK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmG-kb-Fm4">
+                                <rect key="frame" x="87" y="80" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOn-oK-gc3" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="102" y="389" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3u-dr-LPO" customClass="LoaderButton" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="162" y="527" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kH6-0M-To6" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="102" y="442" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dhF-Xo-Ap8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuQ-7N-yHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672.46376811594212" y="217.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back_white_arraw" width="12" height="20"/>
+    </resources>
+</document>

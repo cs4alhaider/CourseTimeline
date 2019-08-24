@@ -7,19 +7,19 @@
 //
 
 import UIKit
-
-enum ColorType {
-    /// Primary blue color
-    case primary
-    /// Primary white/gray color
-    case primaryBackground
-    
-    var color: UIColor {
-        switch self {
-        case .primary:
-            return .primary
-        case .primaryBackground:
-            return .primaryBackground
-        }
-    }
-}
+//
+// enum ColorType {
+//     /// Primary blue color
+//     case primary
+//     /// Primary white/gray color
+//     case primaryBackground
+//
+//     var color: UIColor {
+//         switch self {
+//         case .primary:
+//             return UIColor.ma
+//         case .primaryBackground:
+//             return .primaryBackground
+//         }
+//     }
+// }
