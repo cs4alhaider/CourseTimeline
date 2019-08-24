@@ -32,7 +32,7 @@
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jAZ-1W-mMX">
-                                        <rect key="frame" x="30" y="105" width="354" height="90.5"/>
+                                        <rect key="frame" x="30" y="105" width="354" height="66.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsC-mC-UaM">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="32.5"/>
@@ -41,7 +41,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We wil send a code (via SMS text message) to your phone number " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-IV-WbM">
-                                                <rect key="frame" x="0.0" y="42.5" width="354" height="48"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="354" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -61,34 +61,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfr-AC-2X0" customClass="WhiteGradientView" customModule="CourseTimeline" customModuleProvider="target">
                                 <rect key="frame" x="30" y="253.5" width="354" height="280"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EmW-Qu-jxx">
-                                        <rect key="frame" x="20" y="20" width="314" height="240"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EmW-Qu-jxx">
+                                        <rect key="frame" x="20" y="42.5" width="314" height="195"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lN4-pN-Chu">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="63.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lN4-pN-Chu">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-kX-vaX" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="63.5"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-kX-vaX" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="honorifix-prefix"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="honorifix-prefix"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-OQ-l9R" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
-                                                        <rect key="frame" x="164.5" y="0.0" width="149.5" height="63.5"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-OQ-l9R" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                        <rect key="frame" x="167" y="0.0" width="147" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="honorifix-suffix"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="honorifix-suffix"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="UHe-ln-DOG"/>
+                                                </constraints>
                                             </stackView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKI-Jn-JWJ" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="88.5" width="314" height="63.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WKI-Jn-JWJ" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="75" width="314" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="CGv-1q-BIb"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58T-cR-2xC" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="177" width="314" height="63"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="58T-cR-2xC" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="150" width="314" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="uDZ-Pb-wYw"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
@@ -101,22 +110,21 @@
                                     <constraint firstAttribute="trailing" secondItem="EmW-Qu-jxx" secondAttribute="trailing" constant="20" id="FPb-9R-WFV"/>
                                     <constraint firstAttribute="height" constant="280" id="HpO-b3-yJP"/>
                                     <constraint firstItem="EmW-Qu-jxx" firstAttribute="leading" secondItem="wfr-AC-2X0" secondAttribute="leading" constant="20" id="O6A-NE-af2"/>
-                                    <constraint firstItem="EmW-Qu-jxx" firstAttribute="top" secondItem="wfr-AC-2X0" secondAttribute="top" constant="20" id="XeG-5n-frh"/>
-                                    <constraint firstAttribute="bottom" secondItem="EmW-Qu-jxx" secondAttribute="bottom" constant="20" id="lt1-DH-LWc"/>
+                                    <constraint firstItem="EmW-Qu-jxx" firstAttribute="centerY" secondItem="wfr-AC-2X0" secondAttribute="centerY" id="Zoj-ON-RGg"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By regsting you agree to our Tearms and conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28c-yR-d2Z" customClass="Label" customModule="CourseTimeline" customModuleProvider="target">
-                                <rect key="frame" x="30" y="563.5" width="354" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By registering you agree to our Terms and conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28c-yR-d2Z" customClass="Label" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="30" y="701" width="354" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3S-oQ-cEO" customClass="LoaderButton" customModule="CourseTimeline" customModuleProvider="target">
-                                <rect key="frame" x="30" y="639.5" width="354" height="70"/>
+                                <rect key="frame" x="30" y="762" width="354" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="GzF-53-CJs"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Continue"/>
                                 <connections>
                                     <action selector="registerTapped:" destination="h9i-W4-5jE" eventType="touchUpInside" id="YJx-1o-sua"/>
                                 </connections>
@@ -125,13 +133,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wfr-AC-2X0" firstAttribute="leading" secondItem="w17-ka-T7f" secondAttribute="leading" constant="30" id="2Lc-AN-VG8"/>
-                            <constraint firstItem="z3S-oQ-cEO" firstAttribute="top" secondItem="28c-yR-d2Z" secondAttribute="bottom" constant="35" id="4xn-Rw-z7k"/>
+                            <constraint firstItem="w17-ka-T7f" firstAttribute="bottom" secondItem="z3S-oQ-cEO" secondAttribute="bottom" constant="30" id="3Q1-KN-a85"/>
+                            <constraint firstItem="z3S-oQ-cEO" firstAttribute="top" secondItem="28c-yR-d2Z" secondAttribute="bottom" constant="25" id="4xn-Rw-z7k"/>
                             <constraint firstItem="wfr-AC-2X0" firstAttribute="top" secondItem="k70-xw-See" secondAttribute="bottom" constant="-60" id="BiW-jx-rrF"/>
                             <constraint firstItem="k70-xw-See" firstAttribute="height" secondItem="UqO-1i-LGZ" secondAttribute="height" multiplier="0.35" id="Bru-kO-cNl"/>
                             <constraint firstItem="k70-xw-See" firstAttribute="trailing" secondItem="w17-ka-T7f" secondAttribute="trailing" id="Gqm-aq-Q4I"/>
                             <constraint firstItem="w17-ka-T7f" firstAttribute="trailing" secondItem="28c-yR-d2Z" secondAttribute="trailing" constant="30" id="KiY-zY-mLj"/>
                             <constraint firstItem="k70-xw-See" firstAttribute="top" secondItem="UqO-1i-LGZ" secondAttribute="top" id="W1o-lS-O5C"/>
-                            <constraint firstItem="28c-yR-d2Z" firstAttribute="top" secondItem="wfr-AC-2X0" secondAttribute="bottom" constant="30" id="XMV-WV-SLd"/>
                             <constraint firstItem="z3S-oQ-cEO" firstAttribute="leading" secondItem="w17-ka-T7f" secondAttribute="leading" constant="30" id="YzM-Ma-qbe"/>
                             <constraint firstItem="w17-ka-T7f" firstAttribute="trailing" secondItem="wfr-AC-2X0" secondAttribute="trailing" constant="30" id="hzy-84-lPo"/>
                             <constraint firstItem="28c-yR-d2Z" firstAttribute="leading" secondItem="w17-ka-T7f" secondAttribute="leading" constant="30" id="pCK-n6-pjh"/>
@@ -152,44 +160,123 @@
             <point key="canvasLocation" x="-49.275362318840585" y="222.99107142857142"/>
         </scene>
         <!--LoginVC-->
-        <scene sceneID="aAa-9t-x4i">
+        <scene sceneID="oeY-AK-Q21">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="D5C-Bb-Vbt" customClass="LoginVC" customModule="CourseTimeline" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nqV-Bg-taK">
+                <viewController storyboardIdentifier="LoginVC" id="A1U-N0-itJ" customClass="LoginVC" customModule="CourseTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KxW-5R-GR3" customClass="View" customModule="CourseTimeline" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmG-kb-Fm4">
-                                <rect key="frame" x="87" y="80" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOn-oK-gc3" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
-                                <rect key="frame" x="102" y="389" width="211" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3u-dr-LPO" customClass="LoaderButton" customModule="CourseTimeline" customModuleProvider="target">
-                                <rect key="frame" x="162" y="527" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKG-63-yT5" customClass="PrimaryGradientView" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI4-PN-wgT">
+                                        <rect key="frame" x="20" y="60" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="C9I-W4-hNI"/>
+                                            <constraint firstAttribute="width" constant="50" id="dj9-lc-JOZ"/>
+                                        </constraints>
+                                        <state key="normal" image="Back_white_arraw">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-4J-ddO">
+                                        <rect key="frame" x="30" y="105" width="354" height="66.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg7-Hx-W8P">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="32.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your login details in order to access your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPx-yX-npQ">
+                                                <rect key="frame" x="0.0" y="42.5" width="354" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jd2-4J-ddO" firstAttribute="top" secondItem="qI4-PN-wgT" secondAttribute="bottom" constant="15" id="6ZF-aj-f2H"/>
+                                    <constraint firstItem="qI4-PN-wgT" firstAttribute="top" secondItem="CKG-63-yT5" secondAttribute="top" constant="60" id="88b-XF-XBP"/>
+                                    <constraint firstItem="qI4-PN-wgT" firstAttribute="leading" secondItem="CKG-63-yT5" secondAttribute="leading" constant="20" id="R5z-st-pB2"/>
+                                    <constraint firstItem="jd2-4J-ddO" firstAttribute="leading" secondItem="CKG-63-yT5" secondAttribute="leading" constant="30" id="d1s-g2-Dw4"/>
+                                    <constraint firstAttribute="trailing" secondItem="jd2-4J-ddO" secondAttribute="trailing" constant="30" id="rdy-PB-C9t"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCy-yy-j3Q" customClass="WhiteGradientView" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="30" y="253.5" width="354" height="230"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="MbV-fr-sPl">
+                                        <rect key="frame" x="20" y="55" width="314" height="120"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="QBs-pD-Upg" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="tZE-Zc-UmP"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ftb-hn-M2d" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="75" width="314" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="MZl-mw-riX"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="2rd-Ev-ywv"/>
+                                    <constraint firstItem="MbV-fr-sPl" firstAttribute="centerY" secondItem="gCy-yy-j3Q" secondAttribute="centerY" id="aqG-lK-XHb"/>
+                                    <constraint firstAttribute="trailing" secondItem="MbV-fr-sPl" secondAttribute="trailing" constant="20" id="n9j-KH-YOf"/>
+                                    <constraint firstItem="MbV-fr-sPl" firstAttribute="leading" secondItem="gCy-yy-j3Q" secondAttribute="leading" constant="20" id="vyM-Sm-IfH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxK-Yj-5UR" customClass="LoaderButton" customModule="CourseTimeline" customModuleProvider="target">
+                                <rect key="frame" x="30" y="762" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="zpa-ut-Anj"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="A1U-N0-itJ" eventType="touchUpInside" id="Qkb-9F-6Lu"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kH6-0M-To6" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
-                                <rect key="frame" x="102" y="442" width="211" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="dhF-Xo-Ap8"/>
+                        <constraints>
+                            <constraint firstItem="gCy-yy-j3Q" firstAttribute="leading" secondItem="bpq-G0-vKN" secondAttribute="leading" constant="30" id="0m7-9a-vda"/>
+                            <constraint firstItem="bpq-G0-vKN" firstAttribute="bottom" secondItem="BxK-Yj-5UR" secondAttribute="bottom" constant="30" id="8Ac-nf-DdJ"/>
+                            <constraint firstItem="CKG-63-yT5" firstAttribute="leading" secondItem="bpq-G0-vKN" secondAttribute="leading" id="9oj-eU-do2"/>
+                            <constraint firstItem="CKG-63-yT5" firstAttribute="trailing" secondItem="bpq-G0-vKN" secondAttribute="trailing" id="BOK-YU-eMD"/>
+                            <constraint firstItem="BxK-Yj-5UR" firstAttribute="leading" secondItem="bpq-G0-vKN" secondAttribute="leading" constant="30" id="IVK-dn-4xo"/>
+                            <constraint firstItem="CKG-63-yT5" firstAttribute="height" secondItem="KxW-5R-GR3" secondAttribute="height" multiplier="0.35" id="NH0-rb-mSe"/>
+                            <constraint firstItem="CKG-63-yT5" firstAttribute="top" secondItem="KxW-5R-GR3" secondAttribute="top" id="RxC-oy-Cc6"/>
+                            <constraint firstItem="gCy-yy-j3Q" firstAttribute="top" secondItem="CKG-63-yT5" secondAttribute="bottom" constant="-60" id="fsJ-im-nKG"/>
+                            <constraint firstItem="bpq-G0-vKN" firstAttribute="trailing" secondItem="BxK-Yj-5UR" secondAttribute="trailing" constant="30" id="oBe-RR-gA9"/>
+                            <constraint firstItem="bpq-G0-vKN" firstAttribute="trailing" secondItem="gCy-yy-j3Q" secondAttribute="trailing" constant="30" id="tPM-Yp-cLD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bpq-G0-vKN"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="QBs-pD-Upg" id="4yf-IK-slD"/>
+                        <outlet property="loginButton" destination="BxK-Yj-5UR" id="NxD-Xh-LFA"/>
+                        <outlet property="passwordTextField" destination="Ftb-hn-M2d" id="2nE-Dt-HBy"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OuQ-7N-yHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUW-Kw-kYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672.46376811594212" y="217.63392857142856"/>
+            <point key="canvasLocation" x="648" y="223"/>
         </scene>
     </scenes>
     <resources>
