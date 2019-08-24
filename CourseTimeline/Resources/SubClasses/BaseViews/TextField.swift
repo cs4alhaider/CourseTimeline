@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class TextField: UITextField {
-
+    
     @IBInspectable var image: UIImage? {
         didSet {
             setImage()
@@ -31,7 +31,7 @@ import UIKit
     
     @IBInspectable var baseBorderWidth: CGFloat = 0.7 {
         didSet {
-            refreshBorderWidth(value: baseBorderWidth)
+            // refreshBorderWidth(value: baseBorderWidth)
         }
     }
     
@@ -83,19 +83,7 @@ import UIKit
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        if shadowLayer == nil {
-            shadowLayer = CAShapeLayer()
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
-            shadowLayer.fillColor = UIColor.white.cgColor
-            shadowLayer.shadowColor = shadoColor.cgColor
-            shadowLayer.shadowPath = shadowLayer.path
-            shadowLayer.shadowOffset = CGSize.zero
-            shadowLayer.shadowOpacity = 0.3
-            shadowLayer.shadowRadius = 5
-            layer.insertSublayer(shadowLayer, at: 0)
-            // layer.insertSublayer(shadowLayer, below: nil) // also works
-        }
+        // applyShadow()
     }
     
     /// Main method to be executed.
@@ -112,37 +100,34 @@ import UIKit
         // Basic texfield Setup
         borderStyle = .none
         backgroundColor = .clear
-        textColor = .darkGray
-        // clipsToBounds = true
+        textColor = UIColor.Text.dark
+        font = Identity.font(.custom(weight: .regular, size: 17))
+        clearButtonMode = .whileEditing
         
-        // To apply corner radius
-        layer.cornerRadius = baseCornerRadius
-        
-        // To apply border
-        layer.borderWidth = baseBorderWidth
-        layer.borderColor = color.cgColor
+        setBottomBorder(withColor: UIColor.View.lightPrimary, borderHeight: 2)
+        //layer.backgroundColor = UIColor.View.background.cgColor
     }
     
     private func addSideImage() {
         addSubview(sideImage)
         // if Language.isArabic {
-            sideImage.anchor(top: topAnchor,
-                             left: leftAnchor,
-                             bottom: bottomAnchor,
-                             right: nil,
-                             topConstant: 5,
-                             leftConstant: 15,
-                             bottomConstant: 5,
-                             rightConstant: 0)
+        sideImage.anchor(top: topAnchor,
+                         left: leftAnchor,
+                         bottom: bottomAnchor,
+                         right: nil,
+                         topConstant: 5,
+                         leftConstant: 15,
+                         bottomConstant: 5,
+                         rightConstant: 0)
         // } else {
-            sideImage.anchor(top: topAnchor,
-                             left: nil,
-                             bottom: bottomAnchor,
-                             right: rightAnchor,
-                             topConstant: 5,
-                             leftConstant: 0,
-                             bottomConstant: 5,
-                             rightConstant: 15)
+        sideImage.anchor(top: topAnchor,
+                         left: nil,
+                         bottom: bottomAnchor,
+                         right: rightAnchor,
+                         topConstant: 5,
+                         leftConstant: 0,
+                         bottomConstant: 5,
+                         rightConstant: 15)
         // }
     }
     
@@ -164,6 +149,7 @@ import UIKit
         guard let image = self.image else { sideImage.display = .hidden; return }
         sideImage.display = .visible
         sideImage.image = image
+        clearButtonMode = .never
     }
     
     // MARK: - public methods
@@ -181,6 +167,23 @@ import UIKit
         // nothing
     }
     
+    
+    fileprivate func applyShadow() {
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+            shadowLayer.fillColor = UIColor.white.cgColor
+            shadowLayer.shadowColor = shadoColor.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize.zero
+            shadowLayer.shadowOpacity = 0.3
+            shadowLayer.shadowRadius = 5
+            layer.insertSublayer(shadowLayer, at: 0)
+            // layer.insertSublayer(shadowLayer, below: nil) // also works
+        }
+    }
+    
+    
     // MARK: - Handling and adding the left and right padding
     
     /// Handeling the rightView and leftView on the textfield
@@ -188,11 +191,11 @@ import UIKit
     /// - Parameter clearButtonMode: .unlessEditing, .whileEditing, ...
     /// - Returns: UIEdgeInsets
     private func getPadding(plusExtraFor clearButtonMode: ViewMode) -> UIEdgeInsets {
-        var padding = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        var padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 5)
         
         // Add additional padding on the right side when showing the clear button
         if self.clearButtonMode == .always || self.clearButtonMode == clearButtonMode {
-            padding.right = 35
+            padding.right = 15
         }
         return padding
     }
@@ -214,7 +217,7 @@ import UIKit
     
     override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
         let orginalRect = super.clearButtonRect(forBounds: bounds)
-        return orginalRect.offsetBy(dx: -10, dy: 0)
+        return orginalRect.offsetBy(dx: 1, dy: 0)
         // return Language.isArabic ? orginalRect.offsetBy(dx: 10, dy: 0) : orginalRect.offsetBy(dx: -10, dy: 0)
     }
 }

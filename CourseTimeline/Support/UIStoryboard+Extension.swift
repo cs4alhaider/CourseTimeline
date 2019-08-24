@@ -11,6 +11,10 @@ import Helper4Swift
 
 extension UIStoryboard {
     
+    static var main: UIStoryboard {
+        return "Main".asStoryboard
+    }
+    
     static var auth: UIStoryboard {
         return "Auth".asStoryboard
     }
