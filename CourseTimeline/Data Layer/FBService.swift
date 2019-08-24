@@ -21,13 +21,26 @@ final class FBService {
     
     lazy private(set) var user: User? = Auth.auth().currentUser
     
-    func createUser(withEmail email: String, password: String, firstName: String?, lastName: String?, complition: @escaping (Error?) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+    func signInUser(withEmail email: String, password: String, complition: @escaping (Result<User?, Error>) -> Void) {
+        auth.signIn(withEmail: email, password: password) { (authDataResult, error) in
             if let error = error {
-                complition(error)
+                complition(.failure(error))
                 return
             }
             
+            // Store the user data
+            self.user = authDataResult?.user
+            complition(.success(authDataResult?.user))
+        }
+    }
+    
+    func createUser(withEmail email: String, password: String, firstName: String?, lastName: String?, complition: @escaping (Result<User?, Error>) -> Void) {
+        auth.createUser(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                complition(.failure(error))
+                return
+            }
+            complition(.success(authResult?.user))
             self.updateUserData(email: authResult?.user.email ?? email, firstName: firstName ?? "", lastName: lastName ?? "", uid: authResult?.user.uid ?? "")
             // UserDefaults.standard.set(<#T##value: Any?##Any?#>, forKey: <#T##String#>)
         }
