@@ -15,6 +15,7 @@
 		DD1761BE230F2ED60028964C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1761BD230F2ED60028964C /* Assets.xcassets */; };
 		DD1761C1230F2ED60028964C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1761BF230F2ED60028964C /* LaunchScreen.storyboard */; };
 		DD36A0EF2310ABE9006059D6 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD36A0EE2310ABE9006059D6 /* Extenstions.swift */; };
+		DD3C4B762311D148003D4AA6 /* RouteKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4B752311D148003D4AA6 /* RouteKit.swift */; };
 		DDB131CF2310449D009B7D52 /* PrimaryGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB131CE2310449D009B7D52 /* PrimaryGradientView.swift */; };
 		DDB131D2231044BF009B7D52 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB131D1231044BF009B7D52 /* LoaderButton.swift */; };
 		DDE80EB1230F55BE009C2715 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE80EB0230F55BE009C2715 /* Keys.swift */; };
@@ -62,6 +63,7 @@
 		DD1761C0230F2ED60028964C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1761C2230F2ED60028964C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD36A0EE2310ABE9006059D6 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		DD3C4B752311D148003D4AA6 /* RouteKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteKit.swift; sourceTree = "<group>"; };
 		DDB131CE2310449D009B7D52 /* PrimaryGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryGradientView.swift; sourceTree = "<group>"; };
 		DDB131D1231044BF009B7D52 /* LoaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
 		DDE80EB0230F55BE009C2715 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				DDE80EB9230F576C009C2715 /* Identity */,
 				DD1761B3230F2ED50028964C /* AppDelegate.swift */,
 				DDE80EB7230F56C6009C2715 /* Environment.swift */,
+				DD3C4B752311D148003D4AA6 /* RouteKit.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				DDE80ED6230F623E009C2715 /* View.swift in Sources */,
 				DDE80EBD230F5781009C2715 /* Identity.swift in Sources */,
 				DDE80EDE230F62B6009C2715 /* Switch.swift in Sources */,
+				DD3C4B762311D148003D4AA6 /* RouteKit.swift in Sources */,
 				DDE80EC3230F57B9009C2715 /* Fonts.swift in Sources */,
 				DDE80ED1230F61BE009C2715 /* BaseViewController.swift in Sources */,
 				DDE80EE8230F638A009C2715 /* BaseTabBarController.swift in Sources */,
