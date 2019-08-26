@@ -16,6 +16,7 @@ class RegisterVC: BaseViewController {
     @IBOutlet weak var lastName: TextField!
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
+    @IBOutlet weak var registerButton: LoaderButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,25 +25,28 @@ class RegisterVC: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
     }
     
     @IBAction func registerTapped(_ sender: LoaderButton) {
-        sender.changeStatus(to: .startLoading, duration: 0.7)
         registerNewUser()
+    }
+    
+    @IBAction func backTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     func registerNewUser() {
         guard let email = emailTextField.text,
         let password = passwordTextField.text,
-        email.isValidEmail, password.count > 2 else {
-            
+        email.isValidEmail, password.count > 5 else {
             return
         }
-        
-        FBService.shared.createUser(withEmail: email, password: password, firstName: firstName.text, lastName: lastName.text) { (result) in
+        registerButton.changeStatus(to: .startLoading)
+        FBService.shared.createUser(withEmail: email,
+                                    password: password,
+                                    firstName: firstName.text,
+                                    lastName: lastName.text) { [weak self] (result) in
+            self?.registerButton.changeStatus(to: .stopLoading)
             switch result {
             case .success:
                 RouteKit.changeRootWindow(to: .home, withNavigation: true)

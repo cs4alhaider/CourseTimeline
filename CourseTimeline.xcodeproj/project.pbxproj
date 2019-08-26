@@ -14,8 +14,14 @@
 		DD1761BC230F2ED50028964C /* CourseTimeline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD1761BA230F2ED50028964C /* CourseTimeline.xcdatamodeld */; };
 		DD1761BE230F2ED60028964C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1761BD230F2ED60028964C /* Assets.xcassets */; };
 		DD1761C1230F2ED60028964C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1761BF230F2ED60028964C /* LaunchScreen.storyboard */; };
+		DD349217231362D0007E7554 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD349215231362D0007E7554 /* TimelineTableViewCell.swift */; };
+		DD349218231362D0007E7554 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD349216231362D0007E7554 /* TimelineTableViewCell.xib */; };
+		DD34921A23136FB9007E7554 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34921923136FB9007E7554 /* UPCarouselFlowLayout.swift */; };
+		DD34921D23137566007E7554 /* TimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34921B23137566007E7554 /* TimelineCollectionViewCell.swift */; };
+		DD34921E23137566007E7554 /* TimelineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD34921C23137566007E7554 /* TimelineCollectionViewCell.xib */; };
 		DD36A0EF2310ABE9006059D6 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD36A0EE2310ABE9006059D6 /* Extenstions.swift */; };
 		DD3C4B762311D148003D4AA6 /* RouteKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4B752311D148003D4AA6 /* RouteKit.swift */; };
+		DD7AB9B62312FB24006CD0D5 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7AB9B52312FB24006CD0D5 /* SplashVC.swift */; };
 		DDB131CF2310449D009B7D52 /* PrimaryGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB131CE2310449D009B7D52 /* PrimaryGradientView.swift */; };
 		DDB131D2231044BF009B7D52 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB131D1231044BF009B7D52 /* LoaderButton.swift */; };
 		DDE80EB1230F55BE009C2715 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE80EB0230F55BE009C2715 /* Keys.swift */; };
@@ -62,8 +68,14 @@
 		DD1761BD230F2ED60028964C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1761C0230F2ED60028964C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1761C2230F2ED60028964C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD349215231362D0007E7554 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		DD349216231362D0007E7554 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
+		DD34921923136FB9007E7554 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		DD34921B23137566007E7554 /* TimelineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD34921C23137566007E7554 /* TimelineCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD36A0EE2310ABE9006059D6 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		DD3C4B752311D148003D4AA6 /* RouteKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteKit.swift; sourceTree = "<group>"; };
+		DD7AB9B52312FB24006CD0D5 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		DDB131CE2310449D009B7D52 /* PrimaryGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryGradientView.swift; sourceTree = "<group>"; };
 		DDB131D1231044BF009B7D52 /* LoaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
 		DDE80EB0230F55BE009C2715 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -164,6 +176,7 @@
 			children = (
 				DDB131CE2310449D009B7D52 /* PrimaryGradientView.swift */,
 				DDB131D1231044BF009B7D52 /* LoaderButton.swift */,
+				DD34921923136FB9007E7554 /* UPCarouselFlowLayout.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -292,6 +305,7 @@
 				DD1761BF230F2ED60028964C /* LaunchScreen.storyboard */,
 				DD1761B7230F2ED50028964C /* Main.storyboard */,
 				DD1761B5230F2ED50028964C /* WelcomeVC.swift */,
+				DD7AB9B52312FB24006CD0D5 /* SplashVC.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -301,6 +315,10 @@
 			children = (
 				DDE80F0D230F97E9009C2715 /* Home.storyboard */,
 				DDE80F0B230F97DC009C2715 /* HomeVC.swift */,
+				DD349215231362D0007E7554 /* TimelineTableViewCell.swift */,
+				DD349216231362D0007E7554 /* TimelineTableViewCell.xib */,
+				DD34921B23137566007E7554 /* TimelineCollectionViewCell.swift */,
+				DD34921C23137566007E7554 /* TimelineCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -368,7 +386,9 @@
 				DD1761C1230F2ED60028964C /* LaunchScreen.storyboard in Resources */,
 				DDE80EC5230F5A27009C2715 /* GoogleService-Info.plist in Resources */,
 				DDE80ECC230F6169009C2715 /* Auth.storyboard in Resources */,
+				DD34921E23137566007E7554 /* TimelineCollectionViewCell.xib in Resources */,
 				DDE80F0E230F97E9009C2715 /* Home.storyboard in Resources */,
+				DD349218231362D0007E7554 /* TimelineTableViewCell.xib in Resources */,
 				DD1761BE230F2ED60028964C /* Assets.xcassets in Resources */,
 				DD1761B9230F2ED50028964C /* Main.storyboard in Resources */,
 			);
@@ -429,10 +449,12 @@
 				DDE80EC1230F57AF009C2715 /* FontType.swift in Sources */,
 				DDE80F07230F76E6009C2715 /* FBService.swift in Sources */,
 				DDE80ED4230F621F009C2715 /* Button.swift in Sources */,
+				DD7AB9B62312FB24006CD0D5 /* SplashVC.swift in Sources */,
 				DDE80EE0230F62D5009C2715 /* ImageView.swift in Sources */,
 				DDE80ED6230F623E009C2715 /* View.swift in Sources */,
 				DDE80EBD230F5781009C2715 /* Identity.swift in Sources */,
 				DDE80EDE230F62B6009C2715 /* Switch.swift in Sources */,
+				DD34921D23137566007E7554 /* TimelineCollectionViewCell.swift in Sources */,
 				DD3C4B762311D148003D4AA6 /* RouteKit.swift in Sources */,
 				DDE80EC3230F57B9009C2715 /* Fonts.swift in Sources */,
 				DDE80ED1230F61BE009C2715 /* BaseViewController.swift in Sources */,
@@ -440,8 +462,10 @@
 				DDE80EEC230F63CB009C2715 /* AppResources.swift in Sources */,
 				DDE80EC9230F60E8009C2715 /* UIStoryboard+Extension.swift in Sources */,
 				DDB131CF2310449D009B7D52 /* PrimaryGradientView.swift in Sources */,
+				DD349217231362D0007E7554 /* TimelineTableViewCell.swift in Sources */,
 				DDE80EBB230F5774009C2715 /* Colors.swift in Sources */,
 				DDE80EB1230F55BE009C2715 /* Keys.swift in Sources */,
+				DD34921A23136FB9007E7554 /* UPCarouselFlowLayout.swift in Sources */,
 				DDE80F09230F929C009C2715 /* LoginVC.swift in Sources */,
 				DDE80EB5230F5645009C2715 /* Keys+UserDefaults.swift in Sources */,
 				DDE80EB8230F56C6009C2715 /* Environment.swift in Sources */,

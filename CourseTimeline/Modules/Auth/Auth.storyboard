@@ -30,6 +30,9 @@
                                         <state key="normal" image="Back_white_arraw">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backTapped:" destination="h9i-W4-5jE" eventType="touchUpInside" id="0ji-9G-lH3"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jAZ-1W-mMX">
                                         <rect key="frame" x="30" y="105" width="354" height="66.5"/>
@@ -40,7 +43,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We wil send a code (via SMS text message) to your phone number " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-IV-WbM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account to view your timelines " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-IV-WbM">
                                                 <rect key="frame" x="0.0" y="42.5" width="354" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,13 +70,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lN4-pN-Chu">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-kX-vaX" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-kX-vaX" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="147" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="honorifix-prefix"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-OQ-l9R" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-OQ-l9R" customClass="TextField" customModule="CourseTimeline" customModuleProvider="target">
                                                         <rect key="frame" x="167" y="0.0" width="147" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -153,6 +156,7 @@
                         <outlet property="firstName" destination="7eK-kX-vaX" id="qwZ-JW-SeQ"/>
                         <outlet property="lastName" destination="ajk-OQ-l9R" id="aUr-VE-mgX"/>
                         <outlet property="passwordTextField" destination="58T-cR-2xC" id="rr4-wr-tEx"/>
+                        <outlet property="registerButton" destination="z3S-oQ-cEO" id="7Ua-ZV-pNA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="og4-zX-Up1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,9 +183,12 @@
                                         <state key="normal" image="Back_white_arraw">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backTapped:" destination="A1U-N0-itJ" eventType="touchUpInside" id="nGE-C6-dUs"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-4J-ddO">
-                                        <rect key="frame" x="30" y="105" width="354" height="66.5"/>
+                                        <rect key="frame" x="30" y="105" width="354" height="90.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg7-Hx-W8P">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="32.5"/>
@@ -190,7 +197,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your login details in order to access your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPx-yX-npQ">
-                                                <rect key="frame" x="0.0" y="42.5" width="354" height="24"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="354" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -252,10 +259,15 @@
                                     <action selector="loginTapped:" destination="A1U-N0-itJ" eventType="touchUpInside" id="Qkb-9F-6Lu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fu-cQ-KHM">
+                                <rect key="frame" x="128.5" y="518.5" width="157" height="30"/>
+                                <state key="normal" title="Forgot your password?"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gCy-yy-j3Q" firstAttribute="leading" secondItem="bpq-G0-vKN" secondAttribute="leading" constant="30" id="0m7-9a-vda"/>
+                            <constraint firstItem="7Fu-cQ-KHM" firstAttribute="top" secondItem="gCy-yy-j3Q" secondAttribute="bottom" constant="35" id="5X3-Qj-auK"/>
                             <constraint firstItem="bpq-G0-vKN" firstAttribute="bottom" secondItem="BxK-Yj-5UR" secondAttribute="bottom" constant="30" id="8Ac-nf-DdJ"/>
                             <constraint firstItem="CKG-63-yT5" firstAttribute="leading" secondItem="bpq-G0-vKN" secondAttribute="leading" id="9oj-eU-do2"/>
                             <constraint firstItem="CKG-63-yT5" firstAttribute="trailing" secondItem="bpq-G0-vKN" secondAttribute="trailing" id="BOK-YU-eMD"/>
@@ -263,6 +275,7 @@
                             <constraint firstItem="CKG-63-yT5" firstAttribute="height" secondItem="KxW-5R-GR3" secondAttribute="height" multiplier="0.35" id="NH0-rb-mSe"/>
                             <constraint firstItem="CKG-63-yT5" firstAttribute="top" secondItem="KxW-5R-GR3" secondAttribute="top" id="RxC-oy-Cc6"/>
                             <constraint firstItem="gCy-yy-j3Q" firstAttribute="top" secondItem="CKG-63-yT5" secondAttribute="bottom" constant="-60" id="fsJ-im-nKG"/>
+                            <constraint firstItem="7Fu-cQ-KHM" firstAttribute="centerX" secondItem="gCy-yy-j3Q" secondAttribute="centerX" id="l2a-ql-fBr"/>
                             <constraint firstItem="bpq-G0-vKN" firstAttribute="trailing" secondItem="BxK-Yj-5UR" secondAttribute="trailing" constant="30" id="oBe-RR-gA9"/>
                             <constraint firstItem="bpq-G0-vKN" firstAttribute="trailing" secondItem="gCy-yy-j3Q" secondAttribute="trailing" constant="30" id="tPM-Yp-cLD"/>
                         </constraints>
@@ -280,6 +293,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back_white_arraw" width="12" height="20"/>
+        <image name="Back_white_arraw" width="21" height="20"/>
     </resources>
 </document>

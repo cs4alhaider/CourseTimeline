@@ -18,4 +18,18 @@ class TableView: UITableView {
     }
     */
 
+    override init(frame: CGRect, style: UITableView.Style) {
+        super.init(frame: frame, style: style)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        backgroundColor = UIColor.View.clear
+        separatorStyle = .none
+    }
 }

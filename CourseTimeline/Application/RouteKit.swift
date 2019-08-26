@@ -16,8 +16,9 @@ struct RouteKit {
         vc?.pushThis(screen.viewController)
     }
     
-    static func present(screen: Screen, on vc: UIViewController? = UIApplication.topViewController()) {
-        vc?.presentThis(screen.viewController)
+    static func present(screen: Screen, withNavigation: Bool, on vc: UIViewController? = UIApplication.topViewController()) {
+        let nv = BaseNavigationController(rootViewController: screen.viewController)
+        vc?.presentThis(withNavigation ? nv : screen.viewController)
     }
     
     static func changeRootWindow(to screen: Screen, withNavigation: Bool) {

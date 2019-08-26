@@ -9,23 +9,26 @@
 import UIKit
 
 enum FontType {
-    /// Font.bold.name.withSize(20)
+    /// Font.bold.name.withSize(27)
     case h1
-    /// Font.bold.name.withSize(18)
+    /// Font.bold.name.withSize(20)
     case h2
     /// Font.bold.name.withSize(17)
     case h3
+    /// Font.regular.name.withSize(17)
     case h4
+    /// Font.regular.name.withSize(16)
     case h5
+    /// Font.regular.name.withSize(15)
     case h6
     case custom(weight: Font, size: CGFloat)
     
     var font: UIFont {
         switch self {
         case .h1:
-            return Font.bold.name.withSize(20)
+            return Font.bold.name.withSize(27)
         case .h2:
-            return Font.bold.name.withSize(18)
+            return Font.bold.name.withSize(20)
         case .h3:
             return Font.bold.name.withSize(17)
         case .h4:

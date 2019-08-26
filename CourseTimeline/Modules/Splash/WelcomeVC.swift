@@ -47,7 +47,7 @@ class WelcomeVC: BaseViewController {
     func setupWelcomeLabel() {
         let text = NSMutableAttributedString()
         text
-            .bold("Welcome\n", font: Identity.font(.custom(weight: .bold, size: 27)), color: UIColor.Text.white)
+            .bold("Welcome\n", font: Identity.font(.h1), color: UIColor.Text.white)
             .bold("to timeline app", font: Identity.font(.custom(weight: .thin, size: 25)), color: UIColor.Text.white)
         welcomeLabel.attributedText = text
     }

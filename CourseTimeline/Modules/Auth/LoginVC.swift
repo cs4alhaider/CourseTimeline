@@ -24,6 +24,10 @@ class LoginVC: BaseViewController {
         handleLogin()
     }
     
+    @IBAction func backTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     private func handleLogin() {
         
         guard let email = emailTextField.text,
@@ -34,7 +38,7 @@ class LoginVC: BaseViewController {
         // button loading..
         loginButton.changeStatus(to: .startLoading)
         // Sign in call..
-        FBService.shared.signInUser(withEmail: email, password: password) { (result) in
+        FBService.shared.signInUser(withEmail: email.trimmed, password: password) { (result) in
             self.loginButton.changeStatus(to: .stopLoading)
             switch result {
             case .success:

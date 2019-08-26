@@ -19,7 +19,7 @@ final class FBService {
     private lazy var db = Firestore.firestore()
     private lazy var auth = Auth.auth()
     
-    lazy private(set) var user: User? = Auth.auth().currentUser
+    private(set) var user: User?
     
     func signInUser(withEmail email: String, password: String, complition: @escaping (Result<User?, Error>) -> Void) {
         auth.signIn(withEmail: email, password: password) { (authDataResult, error) in
@@ -91,12 +91,20 @@ final class FBService {
     }
     
     func userIsLoggedIn() -> Bool {
-        return false
         if let user = auth.currentUser {
             self.user = user
             return true
         } else {
             return false
+        }
+    }
+    
+    func logoutUser(complition: @escaping (Result<User?, Error>) -> Void) {
+        do {
+            try auth.signOut()
+            complition(.success(nil))
+        } catch let error {
+            complition(.failure(error))
         }
     }
 }
