@@ -13,6 +13,7 @@ class LoginVC: BaseViewController {
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
     @IBOutlet weak var loginButton: LoaderButton!
+    @IBOutlet weak var forgetPasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,15 @@ class LoginVC: BaseViewController {
     
     @IBAction func backTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func forgetPasswordTapped(_ sender: UIButton) {
+        RouteKit.present(screen: .forgetPassword, withNavigation: true)
+    }
+    
+    override func setupUI() {
+        forgetPasswordButton.setTitleColor(UIColor.View.primary, for: .normal)
+        forgetPasswordButton.titleLabel?.font = Identity.font(.custom(weight: .light, size: 16))
     }
     
     private func handleLogin() {

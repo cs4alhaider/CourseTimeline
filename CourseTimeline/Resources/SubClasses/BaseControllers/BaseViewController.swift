@@ -34,4 +34,5 @@ class BaseViewController: UIViewController {
     
     func setupUI() {}
     func setupTableView() {}
+    func getData() {}
 }

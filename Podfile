@@ -18,4 +18,7 @@ target 'CourseTimeline' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Core'
+  
+  pod 'IQKeyboardManagerSwift'
+
 end

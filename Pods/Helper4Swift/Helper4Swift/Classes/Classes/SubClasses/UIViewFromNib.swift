@@ -7,14 +7,14 @@
 
 import UIKit
 
-public class UIViewFromNib: UIView {
+open class UIViewFromNib: UIView {
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -25,5 +25,5 @@ public class UIViewFromNib: UIView {
     }
     
     /// Add your custom code here, no need to call super.
-    public func setupViews() { }
+    open func setupViews() { }
 }

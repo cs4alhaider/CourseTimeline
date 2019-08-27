@@ -101,7 +101,7 @@ import UIKit
         borderStyle = .none
         backgroundColor = .clear
         textColor = UIColor.Text.dark
-        font = Identity.font(.custom(weight: .regular, size: 17))
+        font = Identity.font(.custom(weight: .light, size: 17))
         clearButtonMode = .whileEditing
         
         setBottomBorder(withColor: UIColor.View.lightPrimary, borderHeight: 2)

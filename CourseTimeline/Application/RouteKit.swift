@@ -18,6 +18,13 @@ struct RouteKit {
     
     static func present(screen: Screen, withNavigation: Bool, on vc: UIViewController? = UIApplication.topViewController()) {
         let nv = BaseNavigationController(rootViewController: screen.viewController)
+        nv.modalPresentationStyle = .overFullScreen
+        nv.modalTransitionStyle = .crossDissolve
+        
+        let screenVC = screen.viewController
+        screenVC.modalPresentationStyle = .overFullScreen
+        screenVC.modalTransitionStyle = .crossDissolve
+        
         vc?.presentThis(withNavigation ? nv : screen.viewController)
     }
     
@@ -37,6 +44,7 @@ extension RouteKit {
         case register
         case login
         case home
+        case forgetPassword
         
         var viewController: UIViewController {
             switch self {
@@ -48,6 +56,8 @@ extension RouteKit {
                 return UIStoryboard.auth.instantiateVC(withClass: LoginVC.self)
             case .home:
                 return UIStoryboard.home.instantiateVC(withClass: HomeVC.self)
+            case .forgetPassword:
+                return UIStoryboard.auth.instantiateVC(withClass: ForgetPasswordVC.self)
             }
         }
         
