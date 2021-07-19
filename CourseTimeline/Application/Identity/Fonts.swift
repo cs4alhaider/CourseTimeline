@@ -25,7 +25,7 @@ enum Font {
             return UIFont.systemFont(ofSize: 10, weight: .black)
         case .bold:
             return UIFont.systemFont(ofSize: 10, weight: .bold)
-        // return UIFont(name: "Mobily-Bold", size: 10) ?? UIFont.boldSystemFont(ofSize: 10)
+        // return UIFont(name: "SomeFont-Bold", size: 10) ?? UIFont.boldSystemFont(ofSize: 10)
         case .semibold:
             return UIFont.systemFont(ofSize: 10, weight: .semibold)
         case .medium:

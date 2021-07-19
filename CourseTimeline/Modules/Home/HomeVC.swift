@@ -30,6 +30,7 @@ class HomeVC: BaseViewController {
     override func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 300
         tableView.registerNibCell(nibWithCellClass: TimelineTableViewCell.self)
     }
     
@@ -61,8 +62,14 @@ class HomeVC: BaseViewController {
 
 // MARK:- UITableViewDelegate
 extension HomeVC: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        switch indexPath.section {
+        case 0:
+            return 300
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -76,7 +83,7 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 1
+            return 10
         default:
             return 0
         }

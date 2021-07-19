@@ -7,6 +7,7 @@
 //
 
 import Helper4Swift
+import UIKit
 
 @IBDesignable class LoaderButton: Button {
     

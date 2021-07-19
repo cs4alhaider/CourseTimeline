@@ -28,4 +28,8 @@ class View: UIView {
     func setupViews() {
         backgroundColor = UIColor.View.background
     }
+    
+    func setBlueGradientBackground() {
+        
+    }
 }

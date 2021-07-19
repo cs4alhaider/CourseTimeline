@@ -20,6 +20,9 @@
 		DD34921D23137566007E7554 /* TimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34921B23137566007E7554 /* TimelineCollectionViewCell.swift */; };
 		DD34921E23137566007E7554 /* TimelineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD34921C23137566007E7554 /* TimelineCollectionViewCell.xib */; };
 		DD34922023144EC7007E7554 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34921F23144EC7007E7554 /* ForgetPasswordVC.swift */; };
+		DD34922723159CA8007E7554 /* BubbleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34922623159CA8007E7554 /* BubbleTabBar.swift */; };
+		DD34922B23159CF5007E7554 /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34922A23159CF5007E7554 /* CBTabBarButton.swift */; };
+		DD34922D2315A34B007E7554 /* BubbleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34922C2315A34B007E7554 /* BubbleTabBarController.swift */; };
 		DD36A0EF2310ABE9006059D6 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD36A0EE2310ABE9006059D6 /* Extenstions.swift */; };
 		DD3C4B762311D148003D4AA6 /* RouteKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C4B752311D148003D4AA6 /* RouteKit.swift */; };
 		DD7AB9B62312FB24006CD0D5 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7AB9B52312FB24006CD0D5 /* SplashVC.swift */; };
@@ -75,6 +78,9 @@
 		DD34921B23137566007E7554 /* TimelineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD34921C23137566007E7554 /* TimelineCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD34921F23144EC7007E7554 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		DD34922623159CA8007E7554 /* BubbleTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTabBar.swift; sourceTree = "<group>"; };
+		DD34922A23159CF5007E7554 /* CBTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBTabBarButton.swift; sourceTree = "<group>"; };
+		DD34922C2315A34B007E7554 /* BubbleTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTabBarController.swift; sourceTree = "<group>"; };
 		DD36A0EE2310ABE9006059D6 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		DD3C4B752311D148003D4AA6 /* RouteKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteKit.swift; sourceTree = "<group>"; };
 		DD7AB9B52312FB24006CD0D5 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -173,9 +179,20 @@
 			path = CourseTimeline;
 			sourceTree = "<group>";
 		};
+		DD34922523159C9A007E7554 /* Tab bar */ = {
+			isa = PBXGroup;
+			children = (
+				DD34922623159CA8007E7554 /* BubbleTabBar.swift */,
+				DD34922A23159CF5007E7554 /* CBTabBarButton.swift */,
+				DD34922C2315A34B007E7554 /* BubbleTabBarController.swift */,
+			);
+			path = "Tab bar";
+			sourceTree = "<group>";
+		};
 		DDB131D0231044A7009B7D52 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DD34922523159C9A007E7554 /* Tab bar */,
 				DDB131CE2310449D009B7D52 /* PrimaryGradientView.swift */,
 				DDB131D1231044BF009B7D52 /* LoaderButton.swift */,
 				DD34921923136FB9007E7554 /* UPCarouselFlowLayout.swift */,
@@ -205,11 +222,11 @@
 		DDE80EB6230F56B3009C2715 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				DDE80EC7230F60D4009C2715 /* Keys */,
-				DDE80EB9230F576C009C2715 /* Identity */,
 				DD1761B3230F2ED50028964C /* AppDelegate.swift */,
 				DDE80EB7230F56C6009C2715 /* Environment.swift */,
 				DD3C4B752311D148003D4AA6 /* RouteKit.swift */,
+				DDE80EC7230F60D4009C2715 /* Keys */,
+				DDE80EB9230F576C009C2715 /* Identity */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -447,10 +464,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB131D2231044BF009B7D52 /* LoaderButton.swift in Sources */,
+				DD34922D2315A34B007E7554 /* BubbleTabBarController.swift in Sources */,
 				DD1761BC230F2ED50028964C /* CourseTimeline.xcdatamodeld in Sources */,
 				DDE80EBF230F579E009C2715 /* ColorType.swift in Sources */,
 				DDE80EC1230F57AF009C2715 /* FontType.swift in Sources */,
 				DDE80F07230F76E6009C2715 /* FBService.swift in Sources */,
+				DD34922B23159CF5007E7554 /* CBTabBarButton.swift in Sources */,
 				DDE80ED4230F621F009C2715 /* Button.swift in Sources */,
 				DD7AB9B62312FB24006CD0D5 /* SplashVC.swift in Sources */,
 				DDE80EE0230F62D5009C2715 /* ImageView.swift in Sources */,
@@ -459,6 +478,7 @@
 				DDE80EDE230F62B6009C2715 /* Switch.swift in Sources */,
 				DD34921D23137566007E7554 /* TimelineCollectionViewCell.swift in Sources */,
 				DD3C4B762311D148003D4AA6 /* RouteKit.swift in Sources */,
+				DD34922723159CA8007E7554 /* BubbleTabBar.swift in Sources */,
 				DDE80EC3230F57B9009C2715 /* Fonts.swift in Sources */,
 				DDE80ED1230F61BE009C2715 /* BaseViewController.swift in Sources */,
 				DDE80EE8230F638A009C2715 /* BaseTabBarController.swift in Sources */,

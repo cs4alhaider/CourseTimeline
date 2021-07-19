@@ -42,7 +42,6 @@ final class FBService {
             }
             complition(.success(authResult?.user))
             self.updateUserData(email: authResult?.user.email ?? email, firstName: firstName ?? "", lastName: lastName ?? "", uid: authResult?.user.uid ?? "")
-            // UserDefaults.standard.set(<#T##value: Any?##Any?#>, forKey: <#T##String#>)
         }
     }
     
@@ -102,9 +101,20 @@ final class FBService {
     func logoutUser(complition: @escaping (Result<User?, Error>) -> Void) {
         do {
             try auth.signOut()
+            self.user = nil
             complition(.success(nil))
         } catch let error {
             complition(.failure(error))
+        }
+    }
+    
+    func resetPassword(email: String, complition: @escaping (Result<User?, Error>) -> Void) {
+        auth.sendPasswordReset(withEmail: email) { (error) in
+            if let error = error {
+                complition(.failure(error))
+                return
+            }
+            complition(.success(nil))
         }
     }
 }

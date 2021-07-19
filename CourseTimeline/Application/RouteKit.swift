@@ -35,6 +35,13 @@ struct RouteKit {
         currentVC?.view.window?.makeKeyAndVisible()
     }
     
+    static func changeRootWindowToTabBar() {
+        let currentVC = UIApplication.topViewController()
+        let tabBar = BaseTabBarController()
+        currentVC?.view.window?.rootViewController =  tabBar
+        currentVC?.view.window?.makeKeyAndVisible()
+    }
+    
 }
 
 extension RouteKit {
@@ -43,8 +50,8 @@ extension RouteKit {
         case welcome
         case register
         case login
-        case home
         case forgetPassword
+        case home
         
         var viewController: UIViewController {
             switch self {
@@ -54,12 +61,11 @@ extension RouteKit {
                 return UIStoryboard.auth.instantiateVC(withClass: RegisterVC.self)
             case .login:
                 return UIStoryboard.auth.instantiateVC(withClass: LoginVC.self)
-            case .home:
-                return UIStoryboard.home.instantiateVC(withClass: HomeVC.self)
             case .forgetPassword:
                 return UIStoryboard.auth.instantiateVC(withClass: ForgetPasswordVC.self)
+            case .home:
+                return UIStoryboard.home.instantiateVC(withClass: HomeVC.self)
             }
         }
-        
     }
 }

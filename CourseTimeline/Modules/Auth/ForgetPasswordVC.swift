@@ -10,11 +10,10 @@ import UIKit
 
 class ForgetPasswordVC: BaseViewController {
 
-    @IBOutlet weak var forgetPasswordView: View!
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var titleLable: Label!
+    @IBOutlet weak var subTitleLable: Label!
     @IBOutlet weak var sendButton: LoaderButton!
-    @IBOutlet weak var hideButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +26,28 @@ class ForgetPasswordVC: BaseViewController {
     }
     
     override func setupUI() {
-        backgroundColor = UIColor.View.clear
-        titleLable.textColor = UIColor.Text.dark
-        titleLable.font = Identity.font(.custom(weight: .regular, size: 18))
-        forgetPasswordView.roundCorners(corners: [.topLeft, .topRight], radius: 15)
-        hideButton.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        titleLable.font = Identity.font(.custom(weight: .bold, size: 27))
+        titleLable.textColor = UIColor.View.white
     }
     
     @IBAction func sendTapped(_ sender: LoaderButton) {
+        guard let email = emailTextField.text?.trimmed, email.isValidEmail else {
+            return
+        }
+        sendButton.changeStatus(to: .startLoading)
+        FBService.shared.resetPassword(email: email) { [weak self] (result) in
+            guard let strongSelf = self else { return }
+            strongSelf.sendButton.changeStatus(to: .stopLoading)
+            switch result {
+            case .success:
+                print("Reset sent!")
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
+    
     @IBAction func hideTapped(_ sender: UIButton) {
-        dismissThis()
+        navigationController?.popViewController(animated: true)
     }
 }

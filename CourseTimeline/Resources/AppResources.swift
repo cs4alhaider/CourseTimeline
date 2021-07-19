@@ -8,20 +8,15 @@
 
 import Foundation
 
-struct MobilyResources {
+struct Resources {
     
     struct URLs {
-        /// "mailto:info@mobily.com.sa"
-        static let emailAddress = "mailto:info@mobily.com.sa"
-        
-        /// "https://itunes.apple.com/sa/app/mobily-%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D9%8A/id375539359?mt=8"
-        static let appStoreURL = "https://itunes.apple.com/sa/app/mobily-%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D9%8A/id375539359?mt=8"
-        
-        /// "itms-apps://itunes.apple.com/sa/app/mobily-%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D9%8A/id375539359?action=write-review&mt=8"
-        static let appStoreRevURL = "itms-apps://itunes.apple.com/sa/app/mobily-%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D9%8A/id375539359?action=write-review&mt=8"
+        static let emailAddress = "mailto:email@email.com"
+        static let appStoreURL = "https://itunes.apple.com/sa/app/..."
+        static let appStoreRevURL = "itms-apps://itunes.apple.com/sa/app/..."
     }
     
     struct Numbers {
-        
+        static let phoneNumber = "0589122222"
     }
 }

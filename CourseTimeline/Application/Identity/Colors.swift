@@ -8,21 +8,14 @@
 
 import UIKit
 
-// typealias ViewColors = UIColor.View
-// typealias TextColors = UIColor.Text
-// typealias ShadowColros = UIColor.Shadow
-
 extension UIColor {
     
     private static var primaryColor: UIColor {
         // return #colorLiteral(red: 0.1486437619, green: 0.5167973042, blue: 0.9228035808, alpha: 1)
-        // return #colorLiteral(red: 0.9803921569, green: 0.5725490196, blue: 0.01568627451, alpha: 1)
-        // return #colorLiteral(red: 0, green: 0.6745098039, blue: 0.9176470588, alpha: 1) // #00ACEA
-        return #colorLiteral(red: 0, green: 0.6, blue: 0.9176470588, alpha: 1)
+        return #colorLiteral(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)
     }
     
     // MARK:- View colors
-    /// Views only colors
     struct View {
         
         /// App primary color
@@ -32,13 +25,12 @@ extension UIColor {
         
         /// App primary color
         static var lightPrimary: UIColor {
-            return #colorLiteral(red: 0.568627451, green: 0.8823529412, blue: 0.9921568627, alpha: 1)
-            // return #colorLiteral(red: 0.9960784314, green: 0.8235294118, blue: 0.5921568627, alpha: 1)
+            return #colorLiteral(red: 0.7566730976, green: 0.8881542087, blue: 0.9864361882, alpha: 1)
         }
         
         /// Main color for all views
         static var background: UIColor {
-            return #colorLiteral(red: 0.9490196078, green: 0.9882352941, blue: 1, alpha: 1)
+            return #colorLiteral(red: 0.9450980392, green: 0.9803921569, blue: 1, alpha: 1)
         }
         
         /// White color
@@ -92,7 +84,7 @@ extension UIColor {
     struct Shadow {
         
         static var primary: UIColor {
-            return UIColor.primaryColor
+            return UIColor.primaryColor.withAlphaComponent(0.3)
         }
         
         static var dark: UIColor {

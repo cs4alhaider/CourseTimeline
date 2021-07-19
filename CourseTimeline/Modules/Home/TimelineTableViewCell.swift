@@ -25,7 +25,6 @@ class TimelineTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     func setupCollectionView() {
         collectionView.backgroundColor = UIColor.View.clear
         collectionView.delegate = self
@@ -77,7 +76,7 @@ extension TimelineTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: TimelineCollectionViewCell.self, for: indexPath)
-        cell.backgroundColor = .red
+        // cell.backgroundColor = .red
         return cell
     }
     

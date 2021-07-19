@@ -12,7 +12,7 @@ import UIKit
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setPrimaryGradientBackground()
+        setBlueGradientBackground()
     }
 }
 
@@ -23,7 +23,7 @@ import UIKit
         backgroundColor = UIColor.View.white
         applyShadowWithRoundCorners(shadowColor: UIColor.Shadow.primary,
                                     cornerRadius: 12,
-                                    shadowOpacity: 0.3,
+                                    shadowOpacity: 1,
                                     shadowRadius: 9)
     }
 }
